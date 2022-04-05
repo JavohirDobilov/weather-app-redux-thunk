@@ -5,7 +5,7 @@ export const SET_ALERT = 'SET_ALERT'
 
 export interface Weather{
     description:string;
-    icons:string;
+    icon:string;
     id:number;
     main:string;
 }
@@ -86,13 +86,3 @@ export type WeatherAction = GetWeatherAction|SetLoadingAction|SetErrorAction
 
 
 
-export interface AlertAction{
-    type:typeof SET_ALERT;
-    payload:string
-}
-
-
-export interface AlertState{
-    message:string;
-    
-}

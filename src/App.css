@@ -39,9 +39,18 @@
   border-radius: 20px;
 }
 .tempratura{
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 80px;
+  font-weight: 600;
 }
 .celcy{
   font-size: 24px;
+}
+.celcy_min{
+  font-size: 12px;
+  padding-top: 12px;
+}
+.weather-icon img{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
