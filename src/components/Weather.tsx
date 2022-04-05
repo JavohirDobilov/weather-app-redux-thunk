@@ -47,7 +47,7 @@ const Weather = ({ data, loading }: { data: WeatherData, loading: boolean }) => 
                         </div>
 
                     </div>
-                    <div className='weather-container shadow-lg p-2 mb-2'>
+                    <div className='weather-container shadow-lg p-2 mb-4'>
                         <div className='weather-title d-flex justify-content-center'>
                             Temp max-min
                         </div>
