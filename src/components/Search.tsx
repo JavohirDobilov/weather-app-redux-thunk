@@ -47,15 +47,18 @@ const celcy =(data?.main?.temp-273.15).toFixed(2)
                 </div>
                 <form className='py-5' onSubmit={handleSubmit}>
                     <input type="text" className="input"  placeholder='Enter city name' value={city} onChange={handchange}/>
-                    <button type="button"  className='button btn-primary m-3'>Search</button>
+                    <button type="button"  className='button btn btn-primary m-3'>Search</button>
                 </form>
                 
             </div>
             <div className='name-country'>
                 {data.name}
             </div>
-            <div className='tempratura'>
-                {celcy} <sup className='celcy'>&#8451;</sup>
+            <div className='tempratura d-flex align-items-center'>
+                <div className=''>
+                {celcy} 
+               </div>
+               <sup className='celcy'>&#8451;</sup>
             </div>
         </div>
     </div>

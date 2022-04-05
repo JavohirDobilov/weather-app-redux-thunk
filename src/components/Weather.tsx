@@ -7,8 +7,14 @@ import { WeatherData } from '../redux/types'
 
 
 const Weather = ({ data, loading }: { data: WeatherData, loading: boolean }) => {
+    console.log(data)
+    console.log(loading)
+    // let des = ''
+    // if(data.weather){
+    //     des = data.weather[0].description
+    // }
 
-    // if (loading) return <></>
+    if (loading) return <></>
     return (
         <div className='weather-section'>
             <div className='container'>
@@ -28,7 +34,7 @@ const Weather = ({ data, loading }: { data: WeatherData, loading: boolean }) => 
                     </div>
                     <div className='weather-container shadow-lg p-2 mb-2 d-flex justify-content-center'>
                         <div className=''>
-                            {/* {data?.weather[0]?.description} */}
+                            {data.weather && data.weather[0].description}
                         </div>
                         {/* <img src={`http://openweathermap.org/img/wn/${data.weather[0].icons}.png`} alt=""/> */}
 
