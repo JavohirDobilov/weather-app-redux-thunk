@@ -22,13 +22,15 @@ const App: FC = () => {
 
   return (
     <div className="App">
-      <div className="row">
-        <div className='col-4'>
-          <Search data={weatherData}/>
-        </div>
-        <div className='col-8'>
-          {loading ? <div className='loader'><SwapSpinner size={60} color="#686769" /></div> :
-            <Weather loading={loading} data={weatherData} />}
+      <div className='home'>
+        <div className="row">
+          <div className='col-md-4 col-12'>
+            <Search data={weatherData} />
+          </div>
+          <div className='col-md-8 col-12'>
+            {loading ? <div className='loader'><SwapSpinner size={60} color="#686769" /></div> :
+              <Weather loading={loading} data={weatherData} />}
+          </div>
         </div>
       </div>
     </div>

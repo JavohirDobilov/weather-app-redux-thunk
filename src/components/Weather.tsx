@@ -24,7 +24,7 @@ const Weather = ({ data, loading }: { data: WeatherData, loading: boolean }) => 
                 <div className=''>
                     <h3>Today</h3>
                 </div>
-                <div className='row justify-content-beetwen'>
+                <div className='row justify-content-center'>
                     <div className='weather-container shadow-lg p-2 mb-2 d-flex justify-content-center'>
                         <div className='weather-content-con'>
                             <div className='weather-content-title'>
