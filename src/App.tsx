@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { FC } from 'react';
+import { useSelector } from 'react-redux';
+import { WeatherData } from './redux/types';
 import './App.css';
+import Search from './components/Search';
+import Weather from './components/Weather';
+import { RootState } from './redux/reducers';
+import { SwapSpinner } from "react-spinners-kit";
 
-function App() {
+
+const App: FC = () => {
+
+
+  let weatherData = {} as WeatherData
+  const weaData = useSelector((state: RootState) => state.weather.data)
+  const loading = useSelector((state: RootState) => state.weather.loading)
+  const error = useSelector((state: RootState) => state.weather.error)
+
+  if (weaData) {
+    weatherData = weaData
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="row">
+        <div className='col-4'>
+          <Search data={weatherData}/>
+        </div>
+        <div className='col-8'>
+          {loading ? <div className='loader'><SwapSpinner size={60} color="#686769" /></div> :
+            <Weather loading={loading} data={weatherData} />}
+        </div>
+      </div>
     </div>
   );
 }
