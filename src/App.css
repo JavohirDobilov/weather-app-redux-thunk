@@ -23,7 +23,10 @@
 
 
 .search{
-  background-color: #ffff;
+  background-image: url("../src/img/cloudy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   border-top-right-radius: 28px;
   border-bottom-right-radius: 28px;
@@ -38,7 +41,12 @@
 
 .input{
   border: none;
-  
+  border-radius: 5px;  
+  height: 38px;
+}
+.input:focus{
+  border: none;
+  outline: none;
 }
 .weather-container{
   margin: 30px;
